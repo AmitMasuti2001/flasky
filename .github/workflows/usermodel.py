@@ -56,7 +56,7 @@ class UserModelTestCase(unittest.TestCase):
         self.assertFalse(u2.confirm(token))
 
     def test_expired_confirmation_token(self):
-        u = User(password='cat')
+        u = User(password='fish')
         db.session.add(u)
         db.session.commit()
         token = u.generate_confirmation_token(1)
